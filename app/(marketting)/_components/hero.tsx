@@ -13,7 +13,7 @@ const Hero = () => {
         Create your forms <br />
         in seconds not hours
       </h1>
-      <p className="max-w-[600px] mt-4 text-center text-gray-500 md:textl-xl lg:text-2xl dark:text-foreground/80">
+      <p className="max-w-[600px] mt-4 text-center text-gray-500 md:textl-xl lg:text-xl dark:text-foreground/80">
         Generate, publish and share your form right away with AI. Dive into
         insightful results, charts and analytics.
       </p>
