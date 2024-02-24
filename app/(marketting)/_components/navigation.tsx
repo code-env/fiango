@@ -15,12 +15,14 @@ export const Navbar = () => {
   return (
     <div
       className={cn(
-        "z-50 bg-background dark:bg-[#1F1F1F] fixed top-0 flex items-center w-full p-6",
+        "z-50 bg-background dark:bg-[#1F1F1F] flex items-center w-full px-6 py-2.5",
         scrolled && "border-b shadow-sm"
       )}
     >
       <Logo />
       <div className="md:ml-auto md:justify-end justify-between w-full flex items-center gap-x-2">
+        <Button variant="ghost">log in</Button>
+        <Button className="text-white">Get Started for free</Button>
         <ModeToggle />
       </div>
     </div>

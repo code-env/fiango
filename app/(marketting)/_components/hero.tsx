@@ -6,22 +6,22 @@ import { Button } from "@/components/ui/button";
 const Hero = () => {
   return (
     <section
-      className="flex flex-col items-center justify-center space-y-4 pt-4 sm:pt-24 w-full bg-[url('/grid.svg')]"
+      className="center flex-col space-y-4 pt-24 w-full bg-[url('/grid.svg')] dark:bg-[url('/grid-dark.svg')]"
       id="hero"
     >
-      <h1 className="text-4xl font-bold text-center tracking-tighter sm:text-5xl md:text-6xl leading-10">
+      <h1 className="text-4xl font-bold text-center tracking-tighter sm:text-5xl md:text-6xl lg:text-8xl leading-10">
         Create your forms <br />
         in seconds not hours
       </h1>
-      <p className="max-w-[600px] mt-4 text-center text-gray-500 md:textl-xl">
+      <p className="max-w-[600px] mt-4 text-center text-gray-500 md:textl-xl lg:text-2xl dark:text-foreground/80">
         Generate, publish and share your form right away with AI. Dive into
         insightful results, charts and analytics.
       </p>
-      <div className="w-full bg-gradient-to-b from-transparent to-white h-24" />
-      <Button className="center-y space-x-3">
+      <Button className="center-y space-x-3 text-white">
         <span>Get Started for free </span>
         <ArrowRight className="w-4 h-4" />
       </Button>
+      <div className="w-full bg-gradient-to-b from-transparent to-white dark:to-[#1f11f] h-24" />
     </section>
   );
 };
