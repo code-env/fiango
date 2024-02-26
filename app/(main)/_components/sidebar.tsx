@@ -20,21 +20,24 @@ const Sidebar = () => {
         <Logo />
       </Link>
 
-      <nav>
-        <ul className="flex flex-col mt-10 ">
+      <nav className="w-[90%] mx-auto">
+        <ul className="flex flex-col mt-10 gap-1">
           {sidebarRoutes.map((route) => {
-            const isActive = route.path.startsWith(pathname);
+            const isActive = route.path.startsWith(
+              pathname.split("/").join("")
+            );
+
             return (
-              <Link
-                href={`/${route.path}`}
-                className={cn(
-                  "flex items-center gap-3 py-2 px-6 dark:bg-gray-800",
-                  isActive && "bg-red-500"
-                )}
-                key={route.name}
-              >
-                <route.icon className="w-4 h-4" />
-                {route.name}
+              <Link href={`/${route.path}`} key={route.name}>
+                <li
+                  className={cn(
+                    "flex items-center gap-3 py-2 px-6 hover:bg-muted rounded-md",
+                    isActive && "bg-muted"
+                  )}
+                >
+                  <route.icon className="w-4 h-4" />
+                  {route.name}
+                </li>
               </Link>
             );
           })}

@@ -1,3 +1,4 @@
+import FormGenerator from "@/components/create-form-btn";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { SearchIcon } from "lucide-react";
@@ -13,14 +14,15 @@ const Navigations = () => {
         <div className="relative">
           <SearchIcon className="absolute left-2.5 top-2.5 h-4 w-4 text-gray-500 dark:text-gray-400" />
           <Input
-            className="pl-8 sm:w-[300px] md:w-[200px] lg:w-[300px]"
+            className="pl-8 sm:w-[300px] md:w-[200px] lg:w-[300px] dark:bg-muted"
             placeholder="Search..."
             type="search"
           />
         </div>
       </form>
       <div className="flex items-center gap-4 md:ml-auto md:gap-2">
-        <Button className="rounded-full" size="icon" variant="ghost">
+        <FormGenerator />
+        <Button className="rounded-full" size="icon" variant="default">
           <span className="sr-only">Toggle user menu</span>
         </Button>
       </div>
