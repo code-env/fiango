@@ -23,9 +23,8 @@ const Sidebar = () => {
       <nav className="w-[90%] mx-auto">
         <ul className="flex flex-col mt-10 gap-1">
           {sidebarRoutes.map((route) => {
-            const isActive = route.path.startsWith(
-              pathname.split("/").join("")
-            );
+            const location = pathname.split("/")[1];
+            const isActive = route.path.includes(location);
 
             return (
               <Link href={`/${route.path}`} key={route.name}>

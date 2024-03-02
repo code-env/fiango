@@ -76,4 +76,8 @@
   .between {
     @apply flex justify-between;
   }
+
+  .page {
+    @apply flex flex-col;
+  }
 }

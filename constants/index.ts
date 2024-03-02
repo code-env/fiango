@@ -1,4 +1,11 @@
-import { GanttChart, Library, LucideLayoutGrid, Settings2 } from "lucide-react";
+import {
+  Beaker,
+  CreditCard,
+  GanttChart,
+  Library,
+  LucideLayoutGrid,
+  Settings2,
+} from "lucide-react";
 import { useMemo } from "react";
 
 export const promptExplanation =
@@ -24,8 +31,26 @@ export const useSidebarRoutes = () =>
       },
       {
         name: "Settings",
-        path: "settings",
+        path: "settings/preferences",
         icon: Settings2,
+      },
+    ];
+
+    return routes;
+  }, []);
+
+export const useSettingsRoutes = () =>
+  useMemo(() => {
+    const routes = [
+      {
+        name: "Preferences",
+        path: "/settings/preferences",
+        icon: Beaker,
+      },
+      {
+        name: "Billing",
+        path: "/settings/billing",
+        icon: CreditCard,
       },
     ];
 
