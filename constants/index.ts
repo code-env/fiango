@@ -56,3 +56,77 @@ export const useSettingsRoutes = () =>
 
     return routes;
   }, []);
+
+export const useBillings = () =>
+  useMemo(() => {
+    const routes = [
+      {
+        title: "Free plan",
+        path: "/settings/preferences",
+        icon: Beaker,
+        options: [
+          {
+            title: "lorem lorem lorem",
+          },
+          {
+            title: "lorem lorem lorem",
+          },
+          {
+            title: "lorem lorem lorem",
+          },
+          {
+            title: "lorem lorem lorem",
+          },
+          {
+            title: "lorem lorem lorem",
+          },
+        ],
+      },
+      {
+        title: "Premium Plan",
+        path: "/settings/billing",
+        icon: CreditCard,
+        options: [
+          {
+            title: "lorem lorem lorem",
+          },
+          {
+            title: "lorem lorem lorem",
+          },
+          {
+            title: "lorem lorem lorem",
+          },
+          {
+            title: "lorem lorem lorem",
+          },
+          {
+            title: "lorem lorem lorem",
+          },
+        ],
+      },
+      {
+        title: "Pro Plan",
+        path: "/settings/billing",
+        icon: CreditCard,
+        options: [
+          {
+            title: "lorem lorem lorem",
+          },
+          {
+            title: "lorem lorem lorem",
+          },
+          {
+            title: "lorem lorem lorem",
+          },
+          {
+            title: "lorem lorem lorem",
+          },
+          {
+            title: "lorem lorem lorem",
+          },
+        ],
+      },
+    ];
+
+    return routes;
+  }, []);
